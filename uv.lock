@@ -164,7 +164,7 @@ wheels = [
 ]
 
 [[package]]
-name = "aneepay-api"
+name = "telegram-api"
 version = "2025"
 source = { virtual = "." }
 dependencies = [
