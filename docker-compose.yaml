@@ -1,0 +1,41 @@
+services:
+  aiogram:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      target: build
+    tty: true
+    restart: unless-stopped
+    container_name: aneepay-bot
+    env_file: .env
+    ports:
+      - 9000:9000
+    volumes:
+      - .:/opt/aneepay-bot:cached
+    command: uv run python -m src.main
+    develop:
+      watch:
+        - action: sync
+          path: ./
+          target: /opt/aneepay-bot
+          ignore:
+            - .venv/
+            - __pycache__/
+            - .git/
+            - .pytest_cache/
+            - .mypy_cache/
+            - .ruff_cache/
+            - logs/
+            - .env
+            - .DS_Store
+
+        - action: rebuild
+          path: ./pyproject.toml
+        
+        - action: rebuild
+          path: ./Dockerfile
+
+networks:
+  default:
+    external: true
+    name: aneepay-network

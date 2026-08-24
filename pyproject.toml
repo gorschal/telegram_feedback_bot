@@ -1,0 +1,110 @@
+[project.urls]
+Homepage = "https://aneepay.com/"
+Documentation = "https://github.com/glavdao/aneepay-api/blob/main/README.md"
+Repository = "git@github.com:glavdao/aneepay-api.git"
+Issues = "https://github.com/glavdao/aneepay-api/issues"
+
+[project]
+name = "aneepay-api"
+description = "API for aneepay.com"
+requires-python = ">=3.12"
+version = "2025"
+license = "proprietary"
+dependencies = [
+    "aiogram>=3.21.0",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.11.7",
+    "pydantic-settings>=2.10.1",
+    "aiohttp-socks>=0.11.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff==0.15.21",
+    "pytest==9.0.3",
+    "pytest-asyncio==1.4.0",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+exclude = [
+]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "D100",
+    "D104",
+    "D107",
+    "D203",
+    "D213",
+    "COM812",
+    "ISC001",
+    "RUF001",
+    "RUF002",
+    "RUF003",
+    "RUF012",
+    "A003",
+    "FA100",
+    "FBT001",
+    "FBT002",
+    "ANN401",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"**/tests/**" = [
+    "D100",
+    "D101",
+    "D102",
+    "D103",
+    "D104",
+    "S101",
+    "ARG001",
+    "ARG002",
+    "PLR2004",
+    "SLF001",
+    "ANN",
+    "SIM117",
+    "ERA001",
+    "PYI024",
+    "INP001",
+    "F841",
+    "N802",
+    "ASYNC",
+    "S105",
+    "PT011",
+    "S106",
+    "PLW0603",
+    "UP017",
+]
+"**/routers/*.py" = [
+    "ARG001",
+]
+"**/dependencies/*.py" = [
+    "ARG001",
+]
+"**/core/**" = [
+    "S105",
+    "S104",
+    "N802",
+    "ARG002",
+    "PLW0603",
+]
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.ruff.lint.mccabe]
+max-complexity = 7
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.pyright]
+typeCheckingMode = "basic"
+reportMissingImports = "none"
+reportMissingModuleSource = "none"
+reportGeneralTypeIssues = "none"

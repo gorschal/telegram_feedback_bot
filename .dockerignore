@@ -1,0 +1,123 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*$py.class
+*.so
+.Python
+.env
+.venv
+venv/
+ENV/
+env/
+__pypackages__/
+poetry.lock
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.tox/
+.dmypy.json
+dmypy.json
+.pyre/
+
+# Python build artifacts
+dist/
+build/
+*.egg-info/
+*.egg
+
+# uv
+.uv/
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose*.yml
+.docker/
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.code-workspace
+
+# Testing
+.tests/
+tests/
+*.test.py
+test_*.py
+*_test.py
+pytest.ini
+
+# Logs
+*.log
+logs/
+*.pid
+
+# CI/CD
+.github/
+.gitlab/
+.gitlab-ci.yml
+.travis.yml
+circle.yml
+azure-pipelines.yml
+
+# Documentation
+README.md
+README.rst
+docs/
+mkdocs.yml
+*.md
+*.rst
+LICENSE
+CONTRIBUTING.md
+CHANGELOG.md
+
+# Project specific
+.env.local
+.env.*.local
+*.db
+*.sqlite
+*.sqlite3
+*.bak
+*.tmp
+*.temp
+.venv.bak/
+.DS_Store
+Thumbs.db
+# *.lock  # uncommented for uv.lock
+.cache/
+
+# Development tools
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+ansible/
+.packer/
+.vagrant/
+
+# Node (if there is a frontend in the same repository)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# OS generated files
+.directory
+.spotlight
+.trashes
