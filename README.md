@@ -1,4 +1,4 @@
-# aneepay-bot
+# telegram_feedback_bot
 
 A Telegram feedback/support bot built with [aiogram](https://docs.aiogram.dev) 3.x.
 It connects end users with an operator (administrator) through a dedicated support chat:
