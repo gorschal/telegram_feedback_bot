@@ -136,8 +136,8 @@ webhook endpoint.
 #   APP_HOST=0.0.0.0
 #   APP_PORT=9000
 
-docker build --target production -t aneepay-bot .
-docker run -d --restart unless-stopped --env-file .env -p 9000:9000 aneepay-bot
+docker build --target production -t telegram-bot .
+docker run -d --restart unless-stopped --env-file .env -p 9000:9000 telegram-bot
 ```
 
 The bot will:

@@ -54,7 +54,7 @@ async def cmd_help(message: Message) -> None:
     """Sends a help message describing the bot's capabilities."""
     logger.info("user_help", extra={"user_id": message.from_user.id})
     await message.answer(
-        "With my help you can contact AneePay technical support and get a reply.\n"
+        "With my help you can contact telegram technical support and get a reply.\n"
         "Just keep writing in this chat. Note that not all message types are supported – "
         "only text, photos, videos, audio, files and voice messages."
     )

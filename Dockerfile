@@ -8,7 +8,7 @@ FROM        python:3.12-slim-bookworm AS build
 
 ARG         UID=1000
 ARG         GID=1000
-ENV         PROJECTPATH=/opt/aneepay-bot \
+ENV         PROJECTPATH=/opt/telegram-bot \
             UV_COMPILE_BYTECODE=1 \
             UV_LINK_MODE=copy \
             UV_PYTHON_DOWNLOADS=0 \
@@ -38,7 +38,7 @@ FROM        python:3.12-slim-bookworm AS prerelease
 
 ARG         UID=1000
 ARG         GID=1000
-ENV         PROJECTPATH=/opt/aneepay-bot \
+ENV         PROJECTPATH=/opt/telegram-bot \
             UV_COMPILE_BYTECODE=1 \
             UV_LINK_MODE=copy \
             UV_PYTHON_DOWNLOADS=0 \
@@ -68,11 +68,11 @@ RUN         --mount=type=cache,target=/home/appuser/.cache/uv,sharing=locked,uid
 
 FROM        python:3.12-slim-bookworm AS production
 
-LABEL       org.opencontainers.image.title="aneepay-bot"
+LABEL       org.opencontainers.image.title="telegram-bot"
 
 ARG         UID=1000
 ARG         GID=1000
-ENV         PROJECTPATH=/opt/aneepay-bot \
+ENV         PROJECTPATH=/opt/telegram-bot \
             PYTHONFAULTHANDLER=1 \
             PYTHONUNBUFFERED=1
 ENV         PATH="${PROJECTPATH}/.venv/bin:${PATH}"
