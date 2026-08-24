@@ -1,12 +1,12 @@
 [project.urls]
-Homepage = "https://telegram.com/"
-Documentation = "https://github.com/glavdao/telegram-api/blob/main/README.md"
-Repository = "git@github.com:glavdao/telegram-api.git"
-Issues = "https://github.com/glavdao/telegram-api/issues"
+Homepage = "https://telegram.org/"
+Documentation = "https://github.com/gorschal/telegram_feedback_bot/blob/main/README.md"
+Repository = "git@github.com:gorschal/telegram_feedback_bot.git"
+Issues = "https://github.com/gorschal/telegram_feedback_bot/issues"
 
 [project]
-name = "telegram-api"
-description = "API for telegram.com"
+name = "telegram_feedback_bot"
+description = "Aiogram-based Telegram support bot connecting users with an admin via forwarded messages"
 requires-python = ">=3.12"
 version = "2025"
 license = "proprietary"
