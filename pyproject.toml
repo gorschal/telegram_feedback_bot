@@ -11,7 +11,7 @@ requires-python = ">=3.12"
 version = "2025"
 license = "proprietary"
 dependencies = [
-    "aiogram>=3.21.0",
+    "aiogram>=3.31.0",
     "python-dotenv>=1.0.0",
     "pydantic>=2.11.7",
     "pydantic-settings>=2.10.1",
